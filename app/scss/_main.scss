@@ -1,3 +1,4 @@
+
 $color1: #202020;
 $color2: #858586;
 $white: #ffffff;
@@ -404,7 +405,6 @@ footer {
 .products-slider {
     margin: 0px 0px 63px 0px;
     position: relative;
-    overflow: visible;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -420,7 +420,6 @@ footer {
         }
     }
     &__wrapper{
-        
         padding: 5px 0px;
     }
     &__item {
@@ -1068,10 +1067,15 @@ footer {
 
 /* product.html END */
 
-/*  */
+/* basket.html start */
 
 
-.wrapper {
+.icon-dust{
+    font-size: 25px;
+}
+.icon-plus, .icon-minus{
+    font-size: 20px;
+    padding: 0px 5px;
 }
 .page-basket {
     .h7{
@@ -1083,6 +1087,9 @@ footer {
     .wrapper {
         max-width: 1000px;
     }
+        &-back{
+            display: none;
+        }
 		&__content {
             padding: 20px 0px 100px 0px;
 		}
@@ -1127,11 +1134,16 @@ footer {
 		}
         &__container{
             display: flex;
+            position: relative;
+        }
+        &__back{
+            line-height: 120%;
         }
         
         
 }
 .basket-item {
+    line-height: 1;
         height: 100px;
         display: flex;
         margin-bottom: 40px;
@@ -1157,6 +1169,7 @@ footer {
 		&__text {
             flex: 0 0 170px;
             width: 170px;
+            line-height: 1.2;
             align-self: start;
 		}
 
@@ -1186,6 +1199,11 @@ footer {
         }
 		&__size-box {
             position: relative;
+            & p{
+                &:hover{
+                    background: $background3;
+                }
+            }
 		}
 
 		&__size-header {
@@ -1195,11 +1213,19 @@ footer {
             align-items: center;
             height: 42px;
             padding: 12px 11px;
+            &:hover{
+                background: $background3;
+            }
             & span{
                 position: relative;
                 top: 1px;
                 font-size: 9px;
                 
+            }
+            &.open{
+                .icon{
+                    transform: rotate(180deg);
+                }
             }
 		}
 
@@ -1210,9 +1236,6 @@ footer {
             left: 0;
             & p{
                 padding: 12px 11px;
-                &:hover{
-                    background: $background3;
-                }
             }
 		}
 
@@ -1293,6 +1316,7 @@ footer {
         }
     
         &__radio-title {
+            font-size: 18px;
             width: 34%;
         }
         &__radio-container{
@@ -1301,9 +1325,17 @@ footer {
         &__radio-box {
             display: flex;
             margin-bottom: 20px;
+            &.open{
+                .color{
+                    background-color: $iconColor4;
+                }
+                .form-order__radio-box-body{
+                    display: block;
+                }
+            }
         }
-        &__wrapper{
-
+        &__radio-wrapper{
+            line-height: 1.4;
         }
         &__radio-box-header {
             display: flex;
@@ -1311,10 +1343,26 @@ footer {
         }
     
         &__radio-input {
+            flex: 0 0 auto;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            border: 1px solid $color2;
             margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .color{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: transparent;
+            }
+            
         }
     
         &__radio-box-body {
+            display: none;
         }
     
         &__input-box-adress {
@@ -1327,6 +1375,7 @@ footer {
         }
     
         &__textarea-title {
+            font-size: 18px;
             width: 34%;
         }
     
@@ -1339,14 +1388,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
 .right-bar {
     position: sticky;
     top: 0;
@@ -1356,7 +1397,6 @@ footer {
     display: flex;
     flex-direction: column;
     & a{
-        text-decoration: underline;
         &:hover{
             text-decoration: none;
         }
@@ -1364,7 +1404,7 @@ footer {
         &__link-box{
             margin-bottom: 50px;
         }
-		&__link {
+		&__link,.right-bar__link-login {
             line-height: 1.2;
             display: block;
             margin-bottom: 17px;
@@ -1401,7 +1441,9 @@ footer {
             background: #202020;
             border-radius: 55px;
             color: #fff;
-            margin-bottom: 30px;
+            &-box{
+                margin-bottom: 30px;
+            }
 		}
 
 		&__text {

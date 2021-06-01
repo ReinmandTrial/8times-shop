@@ -209,14 +209,14 @@
         left: 0;
         width: 100%;
         z-index: 10;
-        
-        padding: calc(86px + (240 - 86) * ((100vw - 320px) / (1920 - 320))) 20px 20px 20px;
+        padding: calc(106px + (240 - 106) * ((100vw - 320px) / (1920 - 320))) 20px 20px 20px;
     }
     .form-order{
         padding: 20px;
     }
     .right-bar{
         width: 100%;
+        position: static;
     }
     .header{
         z-index: 20;
@@ -224,11 +224,34 @@
     .right-bar__link{
         display: none;
     }
+    .right-bar__link-login{
+        display: inline-block;
+        position: absolute;
+        top: calc(76px + (230 - 76) * ((100vw - 320px) / (1920 - 320)));
+        right: 20px;
+    }
+    .page-basket-back{
+        display: inline-block;
+        position: absolute;
+        top: calc(78px + (232 - 78) * ((100vw - 320px) / (1920 - 320)));
+        left: 20px;
+    }
     .right-bar__total{
         justify-content: center;
         & p{
             margin-right: 10px;
         }
+    }
+    .right-bar__button-box{
+        margin-bottom: unset;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 14px;
+        width: 100%;
+        background: #fff;
+        border-top: 1px solid #000;
+        z-index: 10;
     }
     .burger{
         &-table__item{
@@ -266,6 +289,15 @@
             }
         }
     }
+    .products-slider__img{
+        width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .page-main .products-slider__button{
+        display: none;
+    }
+    .swiper-container{
+        margin: 0px -14px 0px 0px;
+    }
 }
 @media (max-width: 767.98px) {
     .footer__block{
@@ -291,9 +323,7 @@
     .products-slider__header{
         margin-bottom: 15px;
     }
-    .page-main .products-slider__button{
-        display: none;
-    }
+    
     .page-favorites .products-slider__button{
         top: 5px;
         background: unset;
@@ -313,9 +343,7 @@
             color: $color1;
         }
     }
-    .products-slider__img{
-        width: calc(132px + (327 - 132) * ((100vw - 320px) / (1920 - 320)));
-    }
+    
     .banner{
         &__title{
             display: none;
@@ -545,5 +573,18 @@
         .close {
             right: 110px;
         }
+    }
+    .form-order__input-box, .form-order__radio, .form-order__textarea-box{
+        flex-direction: column;
+    }
+    .form-order__input-box-adress, .form-order__input-title, .form-order__textarea-input, .form-order__input, .form-order__radio-title, .form-order__radio-container{
+        width: 100%;
+    }
+    .form-order__input-title, .form-order__radio-title, .form-order__textarea-title{
+        margin-bottom: 10px;
+    }
+    .form-order{
+        margin-right: unset;
+        padding: 0;
     }
 }
