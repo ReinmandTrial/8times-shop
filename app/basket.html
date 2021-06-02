@@ -140,6 +140,7 @@
         <div class="wrapper">
             <div class="page-basket__content">
                 <p class="page-basket__header h5">Корзина</p>
+                <p class="page-basket__clear h10">Ваша корзина пока пуста</p>
                 <div class="page-basket__body">
 
                     <!-- basket list start -->
@@ -149,16 +150,21 @@
                                 <img src="images/product-img1.png" alt="">
                             </a>
                             <div class="basket-item__container">
-                                <a href="#" class="basket-item__text">
-                                    <p href="#" class="basket-item__num h10">
-                                        арт. 107824
-                                    </p>
-                                    <p class="basket-item__name h8">
-                                        ПЛАТЬЕ МИДИ С УЗЛОМ
-                                    </p>
-                                </a>
-                                <div class="basket-item__color"></div>
-                                <div class="basket-item__edit-row">
+                                <div class="basket-item__wrapper-show">
+                                    <a href="#" class="basket-item__text">
+                                        <p href="#" class="basket-item__num h10">
+                                            арт. 107824
+                                        </p>
+                                        <p class="basket-item__name h8">
+                                            ПЛАТЬЕ МИДИ С УЗЛОМ
+                                        </p>
+                                    </a>
+                                    <span class="basket-item__color"></span>
+                                </div>
+                                <div class="basket-item__wrapper-hide">
+                                    <a href="#" class="basket-item__button">
+                                        <span class="icon icon-bag"></span>
+                                    </a>
                                     <div class="basket-item__size-box">
                                         <div class="basket-item__size-header basket-item__edit-border">
                                             <p class="basket-item__size-title">L</p>
@@ -174,48 +180,58 @@
                                         <p class="amount-count">1</p>
                                         <a href="#" class="amount-plus"><span class="icon icon-plus"></span></a>
                                     </div>
+                                    <p class="basket-item__price  h9">6 980 ₽</p>
+                                    <a href="#" class="basket-item__delete">
+                                        <span class="icon icon-dust"></span>
+                                    </a>
+                                    <div class="accept">
+                                        <p class="accept__title h8">Удалить товар из корзины?</p>
+                                        <button class="accept__button move h8">ПЕРЕНЕСТИ В ИЗБРАННОЕ</button>
+                                        <button class="accept__button del h8">УДАЛИТЬ</button>
+                                    </div>
                                 </div>
-                                <p class="basket-item__price  h9">6 980 ₽</p>
-                                <a href="#" class="basket-item__delete">
-                                    <span class="icon icon-dust"></span>
-                                </a>
+
                             </div>
                         </li>
+
                         <li class="basket-item">
-                            <a href="#" class="basket-item__img">
+                            <a class="basket-item__img">
                                 <img src="images/product-img1.png" alt="">
                             </a>
                             <div class="basket-item__container">
-                                <a href="#" class="basket-item__text">
-                                    <p href="#" class="basket-item__num h10">
-                                        арт. 107824
-                                    </p>
-                                    <p class="basket-item__name h8">
-                                        ПЛАТЬЕ МИДИ С УЗЛОМ
-                                    </p>
-                                </a>
-                                <div class="basket-item__color"></div>
-                                <div class="basket-item__edit-row">
+                                <div class="basket-item__wrapper-show">
+                                    <a href="#" class="basket-item__text">
+                                        <p href="#" class="basket-item__num h10">
+                                            арт. 107824
+                                        </p>
+                                        <p class="basket-item__name h8">
+                                            ПЛАТЬЕ МИДИ С УЗЛОМ
+                                        </p>
+                                    </a>
+                                    <span class="basket-item__color"></span>
+                                </div>
+                                <div class="basket-item__wrapper-hide">
                                     <div class="basket-item__size-box">
                                         <div class="basket-item__size-header basket-item__edit-border">
-                                            <p>L</p>
+                                            <p class="basket-item__size-title">L</p>
                                             <span class="icon icon-triangle-down"></span>
                                         </div>
                                         <div class="basket-item__size-body basket-item__edit-border">
-                                            <p>M</p>
-                                            <p>L</p>
+                                            <p class="basket-item__size-item">M</p>
+                                            <p class="basket-item__size-item">L</p>
                                         </div>
                                     </div>
-                                    <div class="basket-item__amount basket-item__edit-border">
-                                        <a href="#"><span class="icon icon-minus"></span></a>
-                                        <p>1</p>
-                                        <a href="#"><span class="icon icon-plus"></span></a>
+                                    <div class="basket-item__amount basket-item__edit-border amount">
+                                        <a href="#" class="amount-minus"><span class="icon icon-minus"></span></a>
+                                        <p class="amount-count">1</p>
+                                        <a href="#" class="amount-plus"><span class="icon icon-plus"></span></a>
                                     </div>
+                                    <p class="basket-item__price  h9">6 980 ₽</p>
+                                    <a href="#" class="basket-item__delete">
+                                        <span class="icon icon-dust"></span>
+                                    </a>
                                 </div>
-                                <p class="basket-item__price  h9">6 980 ₽</p>
-                                <a href="#" class="basket-item__delete">
-                                    <span class="icon icon-dust"></span>
-                                </a>
+
                             </div>
                         </li>
                     </ul>
@@ -227,7 +243,7 @@
                         </a>
                         <div class="page-basket__promo-body">
                             <input type="text" class="page-basket__promo-input input h6">
-                            <button class="page-basket__promo-button h7">OK</button>
+                            <button class="h7 page-basket__promo-button">OK</button>
                         </div>
                     </div>
 
@@ -406,9 +422,10 @@
                                 <button class="right-bar__button">ОПЛАТИТЬ ЗАКАЗ</button>
                             </div>
                             <p class="right-bar__text h10">
-                                Нажимая на кнопку «оплатить заказ», я принимаю условия <a href="#">публичной
+                                Нажимая на кнопку «оплатить заказ», я принимаю условия <a href="#"
+                                    class="underline">публичной
                                     оферты</a>
-                                и <a href="#">политики
+                                и <a href="#" class="underline">политики
                                     конфиденциальности</a>
                             </p>
                         </div>
@@ -417,6 +434,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <!-- page basket start -->
 

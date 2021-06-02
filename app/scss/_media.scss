@@ -267,11 +267,6 @@
     }
     .slider{
         padding-top: calc(210px + (200 - 210) * ((100vw - 320px) / (1920 - 320)));
-        // padding-top: calc(210px + (200 - 210) * ((100vw - 320px) / (991 - 320)));
-        .swiper-slide{
-            // padding-top: 130px;
-            // padding-top: calc(210px + (200 - 210) * ((100vw - 320px) / (991 - 320)));
-        }
         &__background{
             top: calc(0px + (-161 - 0) * ((100vw - 320px) / (991 - 320)));
         }
@@ -297,6 +292,50 @@
     }
     .swiper-container{
         margin: 0px -14px 0px 0px;
+    }
+    .basket-item{
+        border-top: 1px solid $color1;
+        margin-bottom: unset;
+    }
+    .page-basket__list{
+        margin: 0px -14px;
+    }
+    .basket-item__wrapper-show{
+        padding: 12px 0px;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+    .basket-item__container{
+        height: 100%;
+        align-items: start;
+    }
+    .basket-item__num{
+        display: none;
+    }
+    .basket-item__color{
+        width: 17px;
+        height: 7px;
+    }
+
+
+    .basket-item__wrapper-hide{
+        background: $color2;
+        margin: unset;
+        padding: 0px 40px 0px 20px;
+        height: 100%;
+        display: none;
+
+    }
+    .basket-item__edit-border{
+        width: unset;
+    }
+    .basket-item__size-box{
+        width: 40%;
+    }
+    .basket-item__amount{
+        width: 25%;
+        margin: 0px auto 0px 15px;
     }
 }
 @media (max-width: 767.98px) {
@@ -465,10 +504,6 @@
             line-height: 24px;
             margin-bottom: 30px;
 		}
-
-		&__input-email {
-		}
-
         &__input-pass {
             margin-bottom: unset;
 		}
@@ -577,7 +612,7 @@
     .form-order__input-box, .form-order__radio, .form-order__textarea-box{
         flex-direction: column;
     }
-    .form-order__input-box-adress, .form-order__input-title, .form-order__textarea-input, .form-order__input, .form-order__radio-title, .form-order__radio-container{
+    .form-order__input-box-adress, .form-order__input-title, .form-order__textarea-input, .form-order__input, .form-order__radio-title, .form-order__radio-container, .form-order__textarea-title{
         width: 100%;
     }
     .form-order__input-title, .form-order__radio-title, .form-order__textarea-title{
