@@ -15,11 +15,11 @@
 			<div class="header__content">
 				<div class="header__nav-left">
 					<a class="icon icon-burger btn-burger"></a>
-					<nav class="header__links">
+					<ul class="header__links">
 						<li><a href="#" class="header__link h6">Новинки</a></li>
 						<li><a href="#" class="header__link h6">Каталог</a></li>
 						<li><a href="#" class="header__link h6">Тренды</a></li>
-					</nav>
+					</ul>
 				</div>
 				<div class="logo">
 					<a href="#">
@@ -54,9 +54,9 @@
 		<div class="burger-table">
 			<div class="burger-table__list">
 				<a class="burger-table__item" href="#">Новинки</a>
-				<a class="burger-table__item" href="#">Каталог<av>
-						<a class="burger-table__item" href="#">Тренды</a>
-						<a class="burger-table__item" href="#">Sale</a>
+				<a class="burger-table__item" href="#">Каталог</a>
+				<a class="burger-table__item" href="#">Тренды</a>
+				<a class="burger-table__item" href="#">Sale</a>
 			</div>
 			<div class="burger-table__list">
 				<a class="burger-table__item" href="#">Доставка</a>
@@ -66,10 +66,10 @@
 				<a class="burger-table__item" href="#">О компании</a>
 			</div>
 			<div class="burger-table__list burger-table__list-mobile">
-				<a class="burger-table__item burger-search" href="#">
+				<span class="burger-table__item burger-search">
 					<input class="burger-search__input" type="text" placeholder="Найти на сайте">
 					<span class="icon icon-search"></span>
-				</a>
+                </span>
 				<a class="burger-table__item burger-exit btn-login" href="#">
 					<span class="icon icon-exit"></span>
 					Войти
@@ -116,6 +116,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!-- registration end  -->
 	<!-- login start  -->
@@ -145,75 +146,77 @@
             <div class="page-favorites__content">
 
                 <!-- SLIDER start -->
-                <div class="products-slider swiper-container">
+                <div class="products-slider">
                     <div class="products-slider__header">
-                        <p class="products-slider__title h5">Избранное</p>
+                        <h1 class="products-slider__title h5">Избранное</h1>
                     </div>
-                    <div class="products-slider__wrapper swiper-wrapper">
-                        <div class="products-slider__item swiper-slide">
-                            <a href="#" class="products-slider__favorite btn-heart">
-                                <span class="icon icon-heart"></span>
-                            </a>
-                            <a href="#" class="products-slider__link">
+                    <div class="products-slider__body  swiper-container">
+                        <div class="products-slider__wrapper swiper-wrapper">
+                            <div class="products-slider__item swiper-slide">
+                                <a href="#" class="products-slider__favorite btn-heart">
+                                    <span class="icon icon-heart"></span>
+                                </a>
+                                <a href="#" class="products-slider__link">
 
-                                <div class="products-slider__img">
-                                    <img src="images/product-img1.png" alt="#">
-                                </div>
-                                <p class="products-slider__name h6">Рубашка синяя</p>
-                                <p class="products-slider__price">5 290 ₽</p>
-                            </a>
-                        </div>
-                        <div class="products-slider__item swiper-slide">
-                            <a href="#" class="products-slider__favorite btn-heart">
-                                <span class="icon icon-heart"></span>
-                            </a>
-                            <a href="#" class="products-slider__link">
+                                    <div class="products-slider__img">
+                                        <img src="images/product-img1.png" alt="#">
+                                    </div>
+                                    <p class="products-slider__name h6">Рубашка синяя</p>
+                                    <p class="products-slider__price">5 290 ₽</p>
+                                </a>
+                            </div>
+                            <div class="products-slider__item swiper-slide">
+                                <a href="#" class="products-slider__favorite btn-heart">
+                                    <span class="icon icon-heart"></span>
+                                </a>
+                                <a href="#" class="products-slider__link">
 
-                                <div class="products-slider__img">
-                                    <img src="images/product-img2.png" alt="#">
-                                </div>
-                                <p class="products-slider__name h6">Рубашка синяя</p>
-                                <p class="products-slider__price">5 290 ₽</p>
-                            </a>
-                        </div>
-                        <div class="products-slider__item swiper-slide">
-                            <a href="#" class="products-slider__favorite btn-heart">
-                                <span class="icon icon-heart"></span>
-                            </a>
-                            <a href="#" class="products-slider__link">
+                                    <div class="products-slider__img">
+                                        <img src="images/product-img2.png" alt="#">
+                                    </div>
+                                    <p class="products-slider__name h6">Рубашка синяя</p>
+                                    <p class="products-slider__price">5 290 ₽</p>
+                                </a>
+                            </div>
+                            <div class="products-slider__item swiper-slide">
+                                <a href="#" class="products-slider__favorite btn-heart">
+                                    <span class="icon icon-heart"></span>
+                                </a>
+                                <a href="#" class="products-slider__link">
 
-                                <div class="products-slider__img">
-                                    <img src="images/product-img3.png" alt="#">
-                                </div>
-                                <p class="products-slider__name h6">Рубашка синяя</p>
-                                <p class="products-slider__price">5 290 ₽</p>
-                            </a>
-                        </div>
-                        <div class="products-slider__item swiper-slide">
-                            <a href="#" class="products-slider__favorite btn-heart">
-                                <span class="icon icon-heart"></span>
-                            </a>
-                            <a href="#" class="products-slider__link">
+                                    <div class="products-slider__img">
+                                        <img src="images/product-img3.png" alt="#">
+                                    </div>
+                                    <p class="products-slider__name h6">Рубашка синяя</p>
+                                    <p class="products-slider__price">5 290 ₽</p>
+                                </a>
+                            </div>
+                            <div class="products-slider__item swiper-slide">
+                                <a href="#" class="products-slider__favorite btn-heart">
+                                    <span class="icon icon-heart"></span>
+                                </a>
+                                <a href="#" class="products-slider__link">
 
-                                <div class="products-slider__img">
-                                    <img src="images/product-img4.png" alt="#">
-                                </div>
-                                <p class="products-slider__name h6">Рубашка синяя</p>
-                                <p class="products-slider__price">5 290 ₽</p>
-                            </a>
-                        </div>
-                        <div class="products-slider__item swiper-slide">
-                            <a href="#" class="products-slider__favorite btn-heart">
-                                <span class="icon icon-heart"></span>
-                            </a>
-                            <a href="#" class="products-slider__link">
+                                    <div class="products-slider__img">
+                                        <img src="images/product-img4.png" alt="#">
+                                    </div>
+                                    <p class="products-slider__name h6">Рубашка синяя</p>
+                                    <p class="products-slider__price">5 290 ₽</p>
+                                </a>
+                            </div>
+                            <div class="products-slider__item swiper-slide">
+                                <a href="#" class="products-slider__favorite btn-heart">
+                                    <span class="icon icon-heart"></span>
+                                </a>
+                                <a href="#" class="products-slider__link">
 
-                                <div class="products-slider__img">
-                                    <img src="images/product-img5.png" alt="#">
-                                </div>
-                                <p class="products-slider__name h6">Рубашка синяя</p>
-                                <p class="products-slider__price">5 290 ₽</p>
-                            </a>
+                                    <div class="products-slider__img">
+                                        <img src="images/product-img5.png" alt="#">
+                                    </div>
+                                    <p class="products-slider__name h6">Рубашка синяя</p>
+                                    <p class="products-slider__price">5 290 ₽</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <button class="products-slider__button products-slider__button_prev">

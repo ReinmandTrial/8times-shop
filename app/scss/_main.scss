@@ -1,3 +1,4 @@
+
 $color1: #202020;
 $color2: #858586;
 $white: #ffffff;
@@ -404,7 +405,6 @@ footer {
 .products-slider {
     margin: 0px 0px 63px 0px;
     position: relative;
-    overflow: visible;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -420,7 +420,6 @@ footer {
         }
     }
     &__wrapper{
-        
         padding: 5px 0px;
     }
     &__item {
@@ -624,9 +623,6 @@ footer {
         top: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
         right: calc(4px + (14 - 4) * ((100vw - 320px) / (1920 - 320)));
         z-index: 2;
-        & span{
-
-        }
     }
 
     &__img {
@@ -1068,21 +1064,33 @@ footer {
 
 /* product.html END */
 
-/*  */
+/* basket.html start */
 
 
-.wrapper {
+.icon-dust{
+    font-size: 25px;
+}
+.icon-plus, .icon-minus{
+    font-size: 20px;
+    padding: 0px 5px;
 }
 .page-basket {
-    .h7{
-        color: $color1;
-    }
     .input{
         margin-bottom: unset;
     }
     .wrapper {
         max-width: 1000px;
     }
+    .h7{
+        color: $color1;
+    }
+        &-back{
+            display: none;
+        }
+        &__clear{
+            text-align: center;
+            display: none;
+        }
 		&__content {
             padding: 20px 0px 100px 0px;
 		}
@@ -1093,9 +1101,6 @@ footer {
             left: 40px;
 		}
 
-		&__body {
-		}
-
 		&__list {
             border-bottom: 1px solid $color1;
 		}
@@ -1103,35 +1108,43 @@ footer {
 
         &__pormo-box {
             padding: 30px 0px 45px 0px;
-		}
-
-		&__promo-title {
+            .input{
+                margin-bottom: 10px;
+            }
 		}
 
 		&__promo-body {
             display: flex;
-            display: none;
-            margin-top: 10px;
+            margin: 10px 0px 0px 0px;
+            flex-wrap: nowrap;
 		}
 
 		&__promo-input {
             max-width: 330px;
-            margin-right: 10px;
+            margin: 0px 10px 0px 0px;
 		}
 
 		&__promo-button {
             padding: 13px 20px;
+            height: 50.4px;
             background: #202020;
             border-radius: 55px;
-            color: #fff;
+            color: $white;
+            font-size: 16px;
 		}
         &__container{
             display: flex;
+            position: relative;
+        
+        }
+        &__back{
+            line-height: 120%;
         }
         
         
 }
 .basket-item {
+    line-height: 1;
         height: 100px;
         display: flex;
         margin-bottom: 40px;
@@ -1154,38 +1167,88 @@ footer {
             align-items: center;
         }
 
+        &__wrapper-show{
+            display: flex;
+            justify-content: space-between;
+            width: 35%;
+            position: relative;
+        }
 		&__text {
-            flex: 0 0 170px;
-            width: 170px;
             align-self: start;
 		}
 
 		&__num {
             margin-bottom: 14px;
 		}
-
-		&__name {
-		}
-
+        &__name{
+            
+            line-height: 1.2;
+        }
+        &__info{
+            display: flex;
+            align-items: center;
+        }
+        &__size_small{
+            margin-right: 10px;
+            font-size: 9px;
+            display: none;
+            color: $color2;
+        }
+        &__amount_small{
+            
+            color: $color2;
+            display: none;
+        }
 		&__color {
+            display: block;
             flex: 0 0 auto;
             width: 60px;
             height: 20px;
             background: $black;
+            margin: 19px 0px 0px 0px;
 		}
+        &__price_small{
+            display: none;
+        }
 
-		&__edit-row {
-            margin-left: 30px;
+		&__wrapper-hide {
+            margin-left: 80px;
             display: flex;
             justify-content: space-between;
-            width: 230px;
+            flex: 1 0 auto;
+            align-items: center;
 		}
+        &__button{
+            width: 30px;
+            height: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: none;
+            .icon-three-band{
+                font-size: 20px;
+                color: $color2;
+            }
+            & span{
+                position: absolute;
+                top: calc(50% - 10px);
+                right: 5px;
+            }
+        }
         &__edit-border{
             width: 100px;
             border: 1px solid $color1;
         }
 		&__size-box {
             position: relative;
+            & p{
+                &:hover{
+                    background: $background3;
+                }
+            }
 		}
 
 		&__size-header {
@@ -1195,11 +1258,19 @@ footer {
             align-items: center;
             height: 42px;
             padding: 12px 11px;
+            &:hover{
+                background: $background3;
+            }
             & span{
                 position: relative;
                 top: 1px;
                 font-size: 9px;
                 
+            }
+            &.open{
+                .icon{
+                    transform: rotate(180deg);
+                }
             }
 		}
 
@@ -1210,9 +1281,6 @@ footer {
             left: 0;
             & p{
                 padding: 12px 11px;
-                &:hover{
-                    background: $background3;
-                }
             }
 		}
 
@@ -1233,7 +1301,7 @@ footer {
 
 		&__price {
             flex: 0 1 auto;
-            width: 160px;
+            width: 110px;
             text-align: right;
 		}
 
@@ -1241,6 +1309,36 @@ footer {
             flex: 0 0 auto;
 		}
 }
+.accept {
+    
+    display: inline-block;
+    display: none;
+    padding: 55px 75px;
+    background: $white;
+    border: 1px solid $color1;
+    text-align: center;
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        display: block;
+        color: $color1;
+        width: 280px;
+        padding: 8px;
+        border: 1px solid $color1;
+        background: transparent;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        &:last-child{
+            margin-bottom: unset;
+        }
+    }
+}
+.move {
+    background: $background2;
+}
+
 
 .form-order{
         flex: 1 1 600px;
@@ -1293,6 +1391,7 @@ footer {
         }
     
         &__radio-title {
+            font-size: 18px;
             width: 34%;
         }
         &__radio-container{
@@ -1301,9 +1400,17 @@ footer {
         &__radio-box {
             display: flex;
             margin-bottom: 20px;
+            &.open{
+                .color{
+                    background-color: $iconColor4;
+                }
+                .form-order__radio-box-body{
+                    display: block;
+                }
+            }
         }
-        &__wrapper{
-
+        &__radio-wrapper{
+            line-height: 1.4;
         }
         &__radio-box-header {
             display: flex;
@@ -1311,10 +1418,26 @@ footer {
         }
     
         &__radio-input {
+            flex: 0 0 auto;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            border: 1px solid $color2;
             margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .color{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: transparent;
+            }
+            
         }
     
         &__radio-box-body {
+            display: none;
         }
     
         &__input-box-adress {
@@ -1327,6 +1450,7 @@ footer {
         }
     
         &__textarea-title {
+            font-size: 18px;
             width: 34%;
         }
     
@@ -1339,14 +1463,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
 .right-bar {
     position: sticky;
     top: 0;
@@ -1356,7 +1472,6 @@ footer {
     display: flex;
     flex-direction: column;
     & a{
-        text-decoration: underline;
         &:hover{
             text-decoration: none;
         }
@@ -1364,7 +1479,7 @@ footer {
         &__link-box{
             margin-bottom: 50px;
         }
-		&__link {
+		&__link,.right-bar__link-login {
             line-height: 1.2;
             display: block;
             margin-bottom: 17px;
@@ -1401,7 +1516,9 @@ footer {
             background: #202020;
             border-radius: 55px;
             color: #fff;
-            margin-bottom: 30px;
+            &-box{
+                margin-bottom: 30px;
+            }
 		}
 
 		&__text {
