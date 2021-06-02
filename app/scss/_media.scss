@@ -164,6 +164,16 @@
         flex: 1 1 823px;
         width: 100%;
         margin: 0px -14px 15px -14px;
+        text-align: center;
+        &-img{
+            width: max-content;
+            padding-bottom: 0;
+            margin: 0 auto;
+            
+            img{
+                width: unset;
+            }
+        }
     }
     .page-product__sett{
         text-align: center;
