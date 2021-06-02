@@ -164,6 +164,16 @@
         flex: 1 1 823px;
         width: 100%;
         margin: 0px -14px 15px -14px;
+        text-align: center;
+        &-img{
+            width: max-content;
+            padding-bottom: 0;
+            margin: 0 auto;
+            
+            img{
+                width: unset;
+            }
+        }
     }
     .page-product__sett{
         text-align: center;
@@ -618,13 +628,23 @@
     .page-basket__pormo-box .input, .page-basket__promo-button{
         font-size: 12px;
     }
-    .form-order__input-box, .form-order__radio, .form-order__textarea-box{
+    .form-order__input-box, 
+    .form-order__radio, 
+    .form-order__textarea-box{
         flex-direction: column;
     }
-    .form-order__input-box-adress, .form-order__input-title, .form-order__textarea-input, .form-order__input, .form-order__radio-title, .form-order__radio-container, .form-order__textarea-title{
+    .form-order__input-box-adress, 
+    .form-order__input-title, 
+    .form-order__textarea-input, 
+    .form-order__input, 
+    .form-order__radio-title, 
+    .form-order__radio-container, 
+    .form-order__textarea-title{
         width: 100%;
     }
-    .form-order__input-title, .form-order__radio-title, .form-order__textarea-title{
+    .form-order__input-title, 
+    .form-order__radio-title, 
+    .form-order__textarea-title{
         margin-bottom: 10px;
     }
     .form-order{
