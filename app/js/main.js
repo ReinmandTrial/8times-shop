@@ -1,3 +1,7 @@
+// const { default: Swiper } = require("swiper");
+
+// const { default: Swiper } = require("swiper");
+
 document.querySelectorAll('.swiper-container').forEach(function (elem) {
     new Swiper(elem, {
         navigation: {
@@ -73,7 +77,10 @@ $('.btn-burger').on('click', function () {
 
 //регистрация попап
 $('.btn-reg').on('click', function () {
-    $('.page-main').removeClass('login-open');
+    // $('.page-main').removeClass('login-open');
+    $($('body')).each(function(){
+        $(this).find('section').removeClass('login-open')
+    })
     $('.page-login').hide();
     $('.page-reg').show();
 
@@ -84,14 +91,21 @@ $('.reg__form>.close').on('click', function () {
 //регистрация попап конец
 //Войти попап 
 $('.btn-login').on('click', function () {
-    $('.page-main').addClass('login-open');
-    // $($('body').find('section')).each(function)
+    // $('.page-main').addClass('login-open');
+    $($('body')).each(function(){
+        $(this).find('section').addClass('login-open')
+    })
     $('.page-reg').hide();
     $('.page-login').show();
     $('.burger').hide();
     $('.btn-burger').removeClass('icon-close').addClass('icon-burger');
-    $('.header').removeClass('open');
+    $('.header').removeClass('open').removeClass('header--basket');
     $('body').removeClass('burger-open');
+    if($('.page-basket__container').hasClass('open')){
+        $('.page-basket__container').removeClass('open');
+        $('.page-basket__container').fadeOut();
+        $('.btn-mobile').removeClass('d-none');
+    }
 })
 // Войти попап конец
 $(window).on("load resize", (function () {
@@ -138,6 +152,7 @@ $('.basket-item__size-item').on('click', function () {
 })
 //Выбор размера коанец
 
+
 // amount 
 $('.amount-plus').on('click', function () {
     var btn = $(this);
@@ -160,13 +175,19 @@ $('.amount-minus').on('click', function () {
  $('.basket-item__button').on('click',function(){
      $(this).closest('.basket-item').toggleClass('open');
  })
- $('.btn-modile').on('click',function(){
-     $(this).closest('.page-basket').find('.page-basket__container').fadeIn();
-     $(this).toggleClass('d-none');
+ $('.page-product__button').on('click',function(){
+     if($(this).parent().hasClass('btn-mobile')){
+        $(this).closest('.page-basket').find('.page-basket__container').fadeIn();
+        $(this).closest('.page-basket').find('.page-basket__container').addClass('open');
+        $(this).parent().toggleClass('d-none');
+        $('.header').addClass('header--basket');
+     }
  })
  $('.page-basket-back').on('click',function(){
      $(this).closest('.page-basket__container').fadeOut();
-     $('.btn-modile').removeClass('d-none');
+     $(this).closest('.page-basket__container').removeClass('open');
+     $('.btn-mobile').removeClass('d-none');
+     $('.header').removeClass('header--basket');
  })
 //basket btn end
 $('.page-basket__promo-title').on('click', function () {
@@ -202,6 +223,7 @@ $(function () {
 })
 
 var mySwiper = undefined;
+var selectSwiper = undefined;
 $(window).on('load resize', function () {
 
     if ($(window).width() > "991") {
@@ -250,77 +272,66 @@ $(window).on('load resize', function () {
                 $('.swiper-slide').removeAttr('style');
             })
         }
+        if( selectSwiper != undefined){
+            $(function(){
+                selectSwiper.destroy();
+                selectSwiper = undefined;
+                $('.select .swiper-wrapper').attr('style');
+                $('.select .swiper-slide').removeAttr('style');
+            })
+        }
         //выподалка размеров
         $('.page-product__size-header').on('click', function () {
             $(this).next().slideToggle('slow');
             $(this).toggleClass('open');
         })
 
-        $('.page-product__size-link').on('click', function () {
-            var size = $(this).find('.page-product__size-num').text();
+        $('.swiper-slide').on('click', function () {
+            var size = $(this).find('.select__size').text();
             $(this).closest('.page-product__size-box').find('.page-product__size-title').text('Размер ' + size);
-            $(this).closest('.page-product__size-body').slideToggle('slow');
+            $(this).closest('.select').slideToggle('slow');
             $(this).closest('.page-product__size-box').find('.page-product__size-header').removeClass('open');
         })
         //выподалка размеров конец
 
-    } else if($(window).width() < "992" &&  mySwiper == undefined){
-        $(function(){
-            mySwiper = new Swiper('.page-product__slider', {
-                speed: 400,
-                spaceBetween: 100,
-                pagination: {
-                  el: '.swiper-pagination',
-                  type: 'bullets',
-                  clickable: true,
-                },
-                loop: true
-            });
+    } else if($(window).width() < "992"){
+        if(mySwiper == undefined){
+            $(function(){
+                mySwiper = new Swiper('.page-product__slider', {
+                    speed: 400,
+                    spaceBetween: 100,
+                    pagination: {
+                      el: '.swiper-pagination',
+                      type: 'bullets',
+                      clickable: true,
+                    },
+                    loop: true
+                });
+            })
+        }
+        if(selectSwiper == undefined){
+             selectSwiper = new Swiper('.size__mobile-container',{
+            speed: 400,
+            spaceBetween:100,
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 0
         })
+        }
         //выподалка размеров мобилка
-        $('.page-product__size-header').on('click', function () {
-            $(this).next().slideToggle('slow');
-            $(this).toggleClass('open');
+        $('.page-product__size-header').on('click',function(){
+            $(this).next().addClass('open');
+            $(this).closest('.page-product__size-box').find('.select__bg').fadeIn();
         })
-        $('.select-mobile__header .icon, .select-mobile__bg').on('click',function(){
-            $(this).closest('.page-product__size-body').slideToggle('slow');
-            $(this).closest('.page-product__size-box').find('.page-product__size-header').removeClass('open');
-        })
-        // $('.select-mobile__body').bind('mousewheel', function(e){
-    
-        //     var scroll = $('.select-mobile__body').scrollTop();
-        //     //Это часть кода, $top рассчитывается в зависимости какой слайд активный
-            
-        //     $('.select-mobile__body').animate({
-        //         scrollTop: scroll
-        //     }, 500);
-                
-        
-        $(function(){
-            $('.select-mobile__body').focus( function (e) {
-                var scroll = $('.select-mobile__body').scrollTop();
-                var kol = parseInt(scroll / 48);
-                var drob = (scroll / 48) % 1;
-                console.log(scroll);
-                if (drob < 0.5) {
-                    // $('.select-mobile__body').animate({scrollTop: 48 * kol}, 500);
-                    // $(Dots).each(function (index) {
-                    //     $(this).removeClass('active');
-                    //     if (index === kol) {
-                    //         $(this).addClass('active');
-                    //     }
-                    // })
-                } else {
-                    // $('.select-mobile__body').animate({scrollTop: 48 * (kol+1)}, 500);
-                    // $(Dots).each(function (index) {
-                    //     $(this).removeClass('active');
-                    //     if (index === (kol + 1)) {
-                    //         $(this).addClass('active');
-                    //     }
-                    // })
-                }
-            });
+        $('.select__header .icon, .select__bg').on('click',function(){
+            $('.select').removeClass('open');
+            $(this).closest('.page-product__size-box').find('.select__bg').fadeOut();
+            var size = $('.select .swiper-slide-active').find('.select__size').text();
+            $(this).closest('.page-product__size-box').find('.page-product__size-title').text('Размер ' + size);
         })
             //выподалка размеров мобилка
     }
 })
+
+
+   
