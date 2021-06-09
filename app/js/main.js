@@ -88,6 +88,9 @@ $('.btn-reg').on('click', function () {
 $('.reg__form>.close').on('click', function () {
     $(this).closest('.page-reg').hide();
 })
+$('.page-login .close').on('click',function(){
+    $(this).closest('.page-login').hide();
+})
 //регистрация попап конец
 //Войти попап 
 $('.btn-login').on('click', function () {
@@ -130,8 +133,8 @@ $(document).on('click', function (e) {
 //end
 
 // add to favorites
-$('.btn-heart').on('click', function () {
-    $(this).find('.icon-heart').toggleClass('active');
+$('.heart').on('click',function(){
+    $(this).toggleClass('active');
 })
 // add to favorit
 

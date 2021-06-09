@@ -91,15 +91,31 @@ section{
 
 /* page.html START*/
 
+.heart{
+    display: inline-block;
+    width:  calc(17px + (32 - 17) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(17px + (32 - 17) * ((100vw - 320px) / (1920 - 320)));
+    background-image: url('../images/svg/heart-gray.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    &--white{
+        background-image: url('../images/svg/heart-white.svg');
+    }
+    &.active{
+        background-image: url('../images/svg/heart-red.svg');
+    }
 
+}
 .icon-footer-facebook{
     font-size: 30px;
     color: black;
 }
-.active{
-    color: $iconColor2;
-    text-shadow: 0px 0px 20px #FF5252;
-}
+// .active{
+//     color: $iconColor2;
+//     text-shadow: 0px 0px 20px #FF5252;
+// }
 .last{
     margin-bottom: 0;
 }
@@ -806,8 +822,7 @@ section{
         &.d-none{
             width: 100%;
             height: 100vh;
-            background: $background3;
-            opacity: 0.98;
+            background: rgba(#C4C4C4, .65);
             position: fixed;
             top: 0;
             left: 0;
