@@ -325,12 +325,14 @@ $(window).on('load resize', function () {
         $('.page-product__size-header').on('click',function(){
             $(this).next().addClass('open');
             $(this).closest('.page-product__size-box').find('.select__bg').fadeIn();
+            $('body,html').css('overflow-y','hidden');
         })
         $('.select__header .icon, .select__bg').on('click',function(){
             $('.select').removeClass('open');
             $(this).closest('.page-product__size-box').find('.select__bg').fadeOut();
             var size = $('.select .swiper-slide-active').find('.select__size').text();
             $(this).closest('.page-product__size-box').find('.page-product__size-title').text('Размер ' + size);
+            $('body,html').css('overflow-y','auto');
         })
             //выподалка размеров мобилка
     }

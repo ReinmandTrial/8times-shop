@@ -48,3 +48,11 @@ input, button, textarea{
 		outline: none;
 	}
 }
+input,
+button,
+textarea,
+select {
+  appearance: none;
+  font: inherit;
+  outline: none;
+}
