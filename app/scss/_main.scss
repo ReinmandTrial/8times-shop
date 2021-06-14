@@ -86,9 +86,16 @@ section{
     margin: 0 auto;
 }
 .d-none{
-    display: none;
+    display: none !important;
 }
-
+.d-flex{
+    display: flex;
+}
+// .icon-fix{
+//     &::before{
+//         height: 24px;
+//     }
+// }
 /* page.html START*/
 
 .heart{
@@ -338,9 +345,6 @@ section{
         width: 100%;
         height: 100%;
     }
-    &.d-none{
-        display: flex;
-    }
 
 }
 .footer {
@@ -488,6 +492,10 @@ section{
     }
     &__name {
         line-height: calc(14px + (34 - 14) * ((100vw - 320px) / (1920 - 320)));
+        width: 132px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; 
     }
 
     &__price {
@@ -837,7 +845,7 @@ section{
             justify-content: center;
             align-items: center;
 		}
-        &.d-none{
+        &.modify{
             width: 100%;
             height: 100vh;
             background: rgba(#C4C4C4, .65);
@@ -1208,10 +1216,7 @@ section{
     }
     .btn-mobile{
         display: none;
-        &.d-none{
-            display: none !important;
         }
-    }
         &-back{
             display: none;
         }
