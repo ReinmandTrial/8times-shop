@@ -329,7 +329,7 @@ $(window).on('load resize', function () {
             $(this).closest('.page-product__size-box').find('.select__bg').fadeIn();
             $('body,html').css('overflow-y','hidden');
         })
-        $('.select__header .icon, .select__bg').on('click',function(){
+        $('.select__header .icon, .select__bg, .select__button').on('click',function(){
             $('.select').removeClass('open');
             $(this).closest('.page-product__size-box').find('.select__bg').fadeOut();
             var size = $('.select .swiper-slide-active').find('.select__size').text();
