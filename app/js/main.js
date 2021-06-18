@@ -32,12 +32,14 @@ document.querySelectorAll('.swiper-container').forEach(function (elem) {
 new Swiper('.swiper-banner', {
     watchOverflow: true, //если слайдов мало, - слайдер отключается
     loop: true, // бесконечный слайдер
-    speed: 400,
+    speed: 600,
     // spaceBetween: 350,
-    autoplay: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
+    },
+    autoplay: {
+        delay: 6000,
     },
 });
 //выбор цвета

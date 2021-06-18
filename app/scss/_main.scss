@@ -237,6 +237,12 @@ section{
         font-size: 20px;
 
     }
+    .icon-close {
+        font-size: 30px;
+    }
+    .icon-burger {
+        margin-right: 40px;
+    }
     &.header--basket{
         position: fixed;
         top: 0;
@@ -410,8 +416,7 @@ section{
 
     &__line-bottom {
         width: 100%;
-        height: 40px;
-        padding-top: 1px;
+        padding: 9px 0px 14px 0px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1739,12 +1744,6 @@ section{
         background: transparent;
         // margin-bottom: 393px;
         margin-bottom: calc(276px + (393 - 276) * ((100vw - 767px) / (1920 - 767)));
-        img {
-            transition: 1s;
-            &:hover {
-                transform: rotate(360deg);
-            }
-        }
     }
     &__btn-mobile{
         display: none;
@@ -1811,5 +1810,8 @@ section{
         color: #fff;
         background: #000;
     }
+}
+.products-slider__button_prev {
+    display: none;
 }
 
