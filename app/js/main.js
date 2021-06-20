@@ -342,5 +342,34 @@ $(window).on('load resize', function () {
     }
 })
 
+// description переключение
+$('.description__nav-item').on('click',function(){
+    var btn = $(this);
+    var btnItem = btn.parent().find('.description__nav-item');
+    var blocks = btn.closest('.description').find('.description__content').find('.description__content-item');
+    var i;
+    if(!btn.hasClass('active')){
+        $(btnItem).each(function(){
+            $(this).removeClass('active');
+        })
+        btn.addClass('active');
 
+        
+        $(btnItem).each(function(index){
+            if($(this).hasClass('active')){
+                i = index;
+            }
+        })
+
+        $(blocks).each(function(index2){
+            if(index2 === i){
+                $(this).addClass('open');
+            }else{
+                $(this).removeClass('open');
+            }
+        })
+        
+    }
+})
+// description переключение конец
    

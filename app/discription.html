@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Catalog</title>
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+   <!-- HEADER start -->
+   <header class="header">
+      <div class="wrapper">
+         <div class="header__content">
+            <div class="header__nav-left">
+               <a class="icon icon-burger btn-burger"></a>
+               <ul class="header__links">
+                  <li><a href="#" class="header__link h6">Новинки</a></li>
+                  <li><a href="#" class="header__link h6">Каталог</a></li>
+                  <li><a href="#" class="header__link h6">Тренды</a></li>
+               </ul>
+            </div>
+            <div class="logo">
+               <a href="#">
+                  <img src="images/Logo.svg" alt="">
+               </a>
+            </div>
+            <div class="header__nav-right">
+               <a href="#" class="header__icon-box left btn-search-mobile">
+                  <span class="icon icon-search"></span>
+                  <span class="header__icon-bg"></span>
+               </a>
+               <a href="#" class="header__icon-box">
+                  <span class="icon icon-heart"></span>
+               </a>
+               <a href="#" class="header__icon-box">
+                  <span class="icon icon-bag"><span class="counter"></span></span>
+               </a>
+               <a href="#" class="header__icon-box exit">
+                  <span class="icon icon-exit"></span>
+                  <span class="header__icon-bg"></span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- HEADER end -->
+
+
+
+   <!-- BURGER start -->
+   <div class="burger">
+      <div class="burger-table">
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">Новинки</a>
+            <a class="burger-table__item" href="#">Каталог</a>
+            <a class="burger-table__item" href="#">Тренды</a>
+            <a class="burger-table__item" href="#">Sale</a>
+         </div>
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">Доставка</a>
+            <a class="burger-table__item" href="#">Избранное</a>
+         </div>
+         <div class="burger-table__list">
+            <a class="burger-table__item" href="#">О компании</a>
+         </div>
+         <div class="burger-table__list burger-table__list-mobile">
+            <span class="burger-table__item burger-search">
+               <input class="burger-search__input" type="text" placeholder="Найти на сайте">
+               <span class="icon icon-search"></span>
+            </span>
+            <a class="burger-table__item burger-exit btn-login" href="#">
+               <span class="icon icon-exit"></span>
+               <span>Войти</span>
+            </a>
+            <a class="burger-table__item burger-lang" href="#">
+               <span class="icon icon-lang"></span>
+               English <span class="burger-table__item-lang">version</span>
+            </a>
+         </div>
+      </div>
+      <div class="burger__button">
+         <a class="btn-contur h10" href="#"><span class="icon icon-instagram"></span>Instagram</a>
+         <a class="btn-primary h10" href="#"><span class="icon icon-whatsapp"></span>WhatsApp</a>
+      </div>
+   </div>
+   <!-- BURGER end -->
+   <!-- registration  -->
+   <div class="page-reg d-none modify">
+      <div class="wrapper">
+         <div class="page-reg__content">
+            <div class="reg__form h8">
+               <a href="#" class="close">
+                  <span class="icon icon-close"></span>
+               </a>
+               <p class="reg__title">Регистрация</p>
+               <div class="reg__container">
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">E-mail</p>
+                     <input type="text" class="input">
+                  </div>
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">Пароль</p>
+                     <input type="password" class="input reg__input-pass">
+                  </div>
+                  <div class="reg__input-box">
+                     <p class="reg__input-title">Восстановить пароль</p>
+                     <input type="password" class="input reg__input-pass last">
+                     <button class="reg__button h9">Зарегестрироваться</button>
+                  </div>
+                  <div class="reg__link-box">
+                     <a href="#" class="reg__link">Уже зарегистрированы?</a>
+                     <a href="#" class="reg__link underline btn-login">Войти в личный кабинет</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- registration end  -->
+   <!-- login start  -->
+   <div class="page-login d-none">
+      <div class="wrapper">
+         <div class="page-login__content">
+            <a href="#" class="close">
+               <span class="icon icon-close"></span>
+            </a>
+            <div class="login__form">
+               <p class="login__title">Вход</p>
+               <p class="login__input-title h8">E-mail</p>
+               <input type="text" class="input">
+               <p class="login__input-title h8">Пароль</p>
+               <input type="password" class="input login__input-pass last">
+               <a href="#" class="login__restore h8">Восстановить пароль</a>
+               <button class="login__button h9">Войти</button>
+               <a href="#" class="login__reg h8 btn-reg">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- login end  -->
+
+   <section class="description">
+      <div class="wrapper">
+         <div class="description__nav">
+            <div class="description__nav-item active">Доставка</div>
+            <div class="description__nav-item">Возврат</div>
+         </div>
+         <div class="description__content">
+            <div class="description__content-item open">
+               <div class="description__paragraph">
+                  <div>Сроки доставки по некоторым заказам сейчас могут быть увеличены на 3 дня. Приносим извинения и
+                     скоро вернемся к привычным срокам.</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Доставка</div>
+                  <div>Получить свой заказ в городах России вы можете двумя способами:</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Курьерская доставка</div>
+                  <div>Самовывоз из пункта выдачи Boxberry</div>
+                  <div>Курьерская доставка</div>
+                  <div>Стоимость: 490 рублей</div>
+                  <div>Сроки: До 10 дней</div>
+                  <div>Способы оплаты: Курьеру наличными или банковской картой, на сайте (картой онлайн, Apple Pay,
+                     Google Pay)</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Детали:</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Без примерки и частичного выкупа</div>
+                  <div>Чтобы получить предоплаченный заказ, нужно будет предъявить паспорт на фамилию и имя оформителя
+                     заказа и расписаться</div>
+                  <div>Если вы отказываетесь от заказа, стоимость доставки не возвращается</div>
+                  <div>В некоторые регионы доставка возможна только Почтой России. Пожалуйста, посмотрите информацию о
+                     возможных ограничениях в работе Почты:</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Оплатить заказ безналичным способом в почтовом отделении можно только в том случае, если
+                     стоимость заказа не превышает 100 000 рублей за одну посылку</div>
+                  <div>Если вы выбрали доставку курьером, стоимость заказа не может превышать 100 000 рублей за один
+                     заказ, при этом оплата курьеру может быть только наличными</div>
+                  <div>Если вы выбрали оплату наложенным платежом, Почта России дополнительно удержит комиссию в размере
+                     2% от суммы заказа, но не менее 50 рублей</div>
+                  <div> К сожалению, мы не можем гарантировать, что Почта России направит вам посылку с курьером,
+                     несмотря на то, что при оформлении заказа вы выбрали курьерскую доставку. В таком случае получить
+                     заказ можно только в почтовом отделении</div>
+                  <div>Самовывоз из пункта выдачи Boxberry</div>
+                  <div>Стоимость: 190 рублей</div>
+                  <div>Сроки: 2–10 дней</div>
+                  <div>Способ оплаты: На сайте (картой онлайн, Apple Pay, Google Pay)</div>
+               </div>
+               <div class="description__paragraph">
+                  Детали:
+               </div>
+               <div class="description__paragraph">
+                  <div>Срок хранения заказа в пункте выдачи — 14 дней</div>
+                  <div>Если вы отказываетесь от заказа, стоимость доставки не возвращается</div>
+                  <div>Найти пункт выдачи в своем городе и уточнить сроки доставки вы можете на сайте Boxberry</div>
+               </div>
+            </div>
+            <div class="description__content-item">
+               <div class="description__paragraph">
+                  <div>ОБЩИЕ ПРАВИЛА ВОЗВРАТА:</div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Вы можете вернуть или обменять товар, если он не был в употреблении*, на нем остались все ярлыки
+                     и этикетки, сохранены качества и вид новой вещи, а также чеки, подтверждающие покупку в нашем
+                     магазине
+                  </div>
+                  <div>Нельзя вернуть или обменять товары из категорий «Косметика», «Белье» и «Купальники»
+                  </div>
+                  <div>Если вы проживаете за пределами России, для оформления возврата свяжитесь с нами
+                  </div>
+                  <div>Пожалуйста, обратите внимание, что мы несем ответственность только за товар, который вы
+                     возвращаете с помощью нашего курьера. Если вы отправляете возврат сами, мы не можем гарантировать,
+                     что товар не потеряется и не получит повреждения при транспортировке
+                  </div>
+                  <div>ПОКУПКА В ИНТЕРНЕТ-МАГАЗИНЕ
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Вернуть товар, который вы приобрели в интернет-магазине 8 TIMES, можно двумя способами:
+                  </div>
+                  <div>Через розничный магазин 8 TIMES
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div> С помощью курьера
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Оформить заявку на возврат, вернуть товар в розничный магазин 8 TIMES, передать курьеру или
+                     отправить почтой нужно в течение 14 дней** с даты получения товара.
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Передача курьеру или отправка почтой (при наличии оформленной в личном кабинете заявки на
+                     возврат) — в течение 14 дней дней с даты получения товара.
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>ВОЗВРАТ ИНТЕРНЕТ-ЗАКАЗА В РОЗНИЧНЫЙ МАГАЗИН 8 TIMES
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>Срок возврата интернет-заказа в розничный магазин 8 TIMES составляет 14 дней** после получения
+                  </div>
+                  <div>Упакуйте вещи в пакет и коробку и приложите заявление на возврат. Доставьте коробку в любой
+                     магазин 8 TIMES, кроме магазина в Алматы. Если вы живете в Казахстане, пожалуйста, вызовите для
+                     возврата бесплатного курьера (подробнее об этом способе см. ниже)
+                  </div>
+                  <div>Способы возврата денежных средств:
+                  </div>
+                  <div>Если вы оплачивали заказа наличными курьеру, деньги вернутся на банковский счет, который вы
+                     укажете в бланке возврата
+                  </div>
+                  <div>Если вы оплачивали заказ безналичным способом, деньги вернутся на счет, с которого происходила
+                     оплата
+                  </div>
+                  <div> Деньги будут возвращены на счет в течение 3 дней после одобрения возврата. Пожалуйста,
+                     проверьте, правильно ли вы заполнили реквизиты, чтобы не возникло проблем с прохождением платежа.
+                     Скорость поступления денежных средств на ваш счет зависит от скорости обработки операций вашим
+                     банком и может достигать 30 дней
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>ВОЗВРАТ ИНТЕРНЕТ-ЗАКАЗОВ С ПОМОЩЬЮ КУРЬЕРА (включая международные заказы)
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>В течение 14 дней** после получения заказа зайдите в личный кабинет и выберите товар для
+                     возврата.
+                  </div>
+                  <div>Сотрудник отдела Дружбы с клиентами свяжется с вами и уточнит удобную дату возврата. Связаться с
+                     отделом Дружбы с клиентами вы можете и самостоятельно.
+                  </div>
+                  <div>Приложите к товару заявление на возврат и распечатайте транспортную накладную, которую мы
+                     отправим в отдельном письме. Упакуйте все вещи для возврата в пакет и коробку. Разместите на
+                     коробке наклейку*** с датой, подписью и ее расшифровкой.
+                  </div>
+                  <div>Передайте заказ курьеру. Для передачи возврата курьеру у вас есть 14 дней после получения заказа,
+                     при условии, что вы вы предварительно оформили возврат через личный кабинет. Возвраты
+                     осуществляются в будние дни с 10:00 до 18:00.
+                  </div>
+                  <div>Курьерская компания доставит возврат на склад за 5 рабочих дней по РФ, за 8-13 дней при
+                     международной доставке. После получения товара мы обработаем вашу заявку и перечислим деньги в срок
+                     до 10 календарных дней. В зависимости от особенностей работы вашего банка перевод денежных средств
+                     может достигать от 1 до 30 банковских дней.
+                  </div>
+                  <div>- при оплате заказа наличными курьеру возврат денежных средств осуществляется только на
+                     Банковский счет Покупателя, который указывается в бланке возврата;
+                  </div>
+                  <div>- при безналичном расчете осуществляется непосредственно на счёт, с которого происходила оплата.
+                  </div>
+                  <div>ПОКУПКА В РОЗНИЧНОМ МАГАЗИНЕ
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>В течение 14 дней после покупки вы можете сдать товар для возврата или обмена в магазин, в
+                     котором вы его приобрели
+                  </div>
+                  <div>Для возврата вам понадобятся товарный чек и паспорт.
+                  </div>
+                  <div>Если вы оплачивали заказ наличными, мы вернем вам сумму наличными
+                  </div>
+                  <div>Если вы оплачивали заказ картой, предъявите ее вместе с остальными документами
+                  </div>
+                  <div>В течение 3 дней после получения возврата мы переведем деньги на вашу карту. Срок поступления
+                     денежных средств на ваш счет зависит от скорости обработки операций вашим банком и может достигать
+                     30 банковских дней
+                  </div>
+                  <div>* Согласно пункту 1 статьи 25 Закона РФ «О защите прав потребителей» от 07.02.1992 № 2300-1.
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>** В соответствии с пунктом 21 Постановления Правительства РФ от 27.09.2007 N 612 «Об утверждении
+                     Правил продажи товаров дистанционным способом».
+                  </div>
+               </div>
+               <div class="description__paragraph">
+                  <div>*** В случае отправки возврата без наклейки ответственность за сохранность вещей лежит на
+                     отправителе заказа (покупателе). Коробка с обувью должна быть упакована в пакет, который
+                     прилагается с отправкой заказа, после чего опечатана индивидуальной наклейкой.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- FOOTER start -->
+   <footer class="footer">
+      <div class="wrapper">
+         <div class="footer__content">
+            <div class="footer__about footer__block">
+               <p class="footer__title">8times</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">О нас</a></li>
+                  <li><a href="#" class="footer__link h7">Написать нам</a></li>
+               </ul>
+               <a href="#" class="icon icon-instagram"></a>
+               <a href="#" class="icon icon-facebook"></a>
+            </div>
+            <div class="footer__catalog footer__block">
+               <p class="footer__title">Каталог</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">Одежда</a></li>
+                  <li><a href="#" class="footer__link h7">Новинки</a></li>
+                  <li><a href="#" class="footer__link h7">Sale</a></li>
+               </ul>
+            </div>
+            <div class="footer__clients footer__block">
+               <p class="footer__title">Клиентам</p>
+               <ul>
+                  <li><a href="#" class="footer__link h7">Доставка</a></li>
+                  <li><a href="#" class="footer__link h7">Обмен и возврат</a></li>
+                  <li><a href="#" class="footer__link h7">Пользовательское соглашение</a></li>
+                  <li><a href="#" class="footer__link h7">Политика конфиденциальности</a></li>
+               </ul>
+            </div>
+            <div class="footer__contacts footer__block">
+               <p class="footer__title">Контакты</p>
+               <p class="footer__adress footer__link h7">адрес: г. Пермь, ул. Революции 20</p>
+               <a href="#" class="footer__link h7 footer__mail">gkp30@mail.ru</a>
+               <a class="footer__link-app" href="#"><img src="images/appstore.svg" alt=""></a>
+               <a class="footer__link-app" href="#"><img src="images/gplay.svg" alt=""></a>
+            </div>
+            <div class="footer__line-bottom h7">
+               <a href="#" class="footer__lang">
+                  <span class="icon icon-lang"></span>
+                  <p>English</p>
+               </a>
+               <p class="footer__license">8times, 2021</p>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER end -->
+
+   <!-- Scripts -->
+   <script src="js/main.min.js"></script>
+   <!-- Scripts  -->
+
+</body>
+
+</html>
