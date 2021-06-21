@@ -235,13 +235,13 @@ section{
         position: relative;
         top: 2px;
         font-size: 20px;
+        margin-right: 40px;
 
     }
     .icon-close {
         font-size: 30px;
     }
     .icon-burger {
-        margin-right: 40px;
     }
     &.header--basket{
         position: fixed;
@@ -291,6 +291,7 @@ section{
         .burger-lang{
             order: 3;
         }
+        height: max-content;
     }
     &-table__item{
         margin-bottom: 60px;
@@ -300,7 +301,9 @@ section{
     
     &-search{
         position: relative;
-        margin-bottom: 95px;
+        height: 43px;
+        margin-bottom: 70px;
+        margin-top: 10px;
         padding-bottom: 10px;
         order: 0;
         display: flex;
@@ -687,6 +690,7 @@ section{
         height: calc(230px + (552 - 230) * ((100vw - 320px) / (1920 - 320)));
         position: relative;
         border-radius: 7px;
+        overflow: hidden;
         margin-bottom: 20px;
         & img {
             width: 100%;
@@ -1752,7 +1756,7 @@ section{
         display: flex;
         justify-content: end;
         height: 100%;
-        padding-right: 120px;
+        // padding-right: 120px;
         img {
             height: 100%;
             display: inline-block;
