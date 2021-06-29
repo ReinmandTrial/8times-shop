@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Catalog</title>
+   <title>Page</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -37,6 +37,9 @@
                <a href="#" class="header__icon-box">
                   <span class="icon icon-bag"><span class="counter"></span></span>
                </a>
+               <a href="#" class="header__icon-box">
+
+               </a>
                <a href="#" class="header__icon-box exit">
                   <span class="icon icon-exit"></span>
                   <span class="header__icon-bg"></span>
@@ -64,6 +67,18 @@
          </div>
          <div class="burger-table__list">
             <a class="burger-table__item" href="#">О компании</a>
+            <div class="burger-table__item burger-table__item-select select-item">
+               <div class="burger-table__item-head select-item-header">
+                  <p>Мой кабинет</p>
+                  <span class="icon icon-triangle-down select-item-icon"></span>
+               </div>
+               <div class="burger-table__item-body select-item-body">
+                  <p>Профиль</p>
+                  <p>Мои заказы</p>
+                  <p>Избранное</p>
+                  <p>Выход</p>
+               </div>
+            </div>
          </div>
          <div class="burger-table__list burger-table__list-mobile">
             <span class="burger-table__item burger-search">
@@ -72,7 +87,7 @@
             </span>
             <a class="burger-table__item burger-exit btn-login" href="#">
                <span class="icon icon-exit"></span>
-               <span>Войти</span>
+               Войти
             </a>
             <a class="burger-table__item burger-lang" href="#">
                <span class="icon icon-lang"></span>
@@ -141,48 +156,92 @@
    </div>
    <!-- login end  -->
 
-   <section class="company">
+   <section class="profile">
       <div class="wrapper">
-         <div class="company__discr">
-            <div class="company__img">
-               <img src="images/company.png" alt="">
-            </div>
-            <div class="company__body">
-               <h4 class="h4">О компании</h4>
-               <p class="company__body-text">
-                  Интернет-магазин 8times – это модное онлайн-пространство, где представлены оригинальные коллекции
-                  женской одежды, обуви и аксессуаров в стиле кэжуал и спорт-шик с ультрамодными акцентами. <span>Наша
-                     миссия — помочь девушкам создать универсальный, продуманный гардероб, элементы которого помогут
-                     каждый раз создавать запоминающийся образ. Для вашего удобства мы создали онлайн-сервис 24/7, где
-                     можно заказать дизайнерскую одежду в любую точку России и не тратить время на офлайн шопинг. Всего
-                     два клика — и желанная вещь у вас.</span>
-               </p>
-               <a href="#" class="company__btn">Каталог</a>
-            </div>
-         </div>
-         <div class="company__contact">
-            <h5 class="h5">Связаться с нами</h5>
-            <div class="company__contact-body">
-               <div class="company__contact-item">
-                  <div class="company__contact-subtitle h8">Телефон</div>
-                  <div class="company__contact-text h8"><a href="tel:+7-902-474-31-09">+7 902 474-31-09</a></div>
+         <div class="profile__content">
+            <aside class="profile-nav">
+               <p class="profile-nav__title h7">Мой кабинет</p>
+               <div class="profile-nav__body h8">
+                  <a href="#" class="profile-nav__item">Профиль</a>
+                  <a href="#" class="profile-nav__item">Мои заказы</a>
+                  <a href="#" class="profile-nav__item">Избранное</a>
+                  <a href="#" class="profile-nav__item">Выход</a>
                </div>
-               <div class="company__contact-item">
-                  <div class="company__contact-subtitle h8">Адрес</div>
-                  <div class="company__contact-text h8">г. Пермь, ул. Революции 20</div>
+            </aside>
+            <div class="profile__container">
+               <p class="profile__title h5">личные данные</p>
+               <div class="profile__block">
+                  <button class="profile__edit-btn h8">Редактировать</button>
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Имя</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">Валерий</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Фамилия</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">Николаев</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
+                  <label class="profile__row profile__pass">
+                     <p class="profile__subtitle h7">Пароль</p>
+                     <div class="profile__item">
+                        <button class="change-pass-btn btn-popup__change btn-popup">
+                           изменить пароль
+                        </button>
+                     </div>
+                  </label>
+                  <label class="profile__row">
+                     <p class="profile__subtitle h7">Телефон</p>
+                     <div class="profile__item">
+                        <p class="profile__value h5">8-800-555-35-35</p>
+                        <input type="text" class="profile__input input">
+                     </div>
+                  </label>
                </div>
-               <div class="company__contact-item">
-                  <div class="company__contact-subtitle h8">Электронная почта</div>
-                  <div class="company__contact-text h8"><a href="mailto:gkp30@mail.ru">gkp30@mail.ru</a></div>
-               </div>
-               <div class="company__contact-item">
-                  <div class="company__contact-subtitle h8">У вас остались вопросы?</div>
-                  <div class="company__contact-text h8"><a href="#">WhatsApp</a>, <a href="#">Instagram</a></div>
-               </div>
+               <label class="profile__accept">
+                  <input type="checkbox" class="radio-input">
+                  <span class="radio-style"></span>
+                  <div class="profile__accept-descr h7">
+                     Я соглашаюсь на обработку моих персональных данных и ознакомлен(а) с <a href="#"
+                        class="profile__link">условиями конфиденциальности</a>
+                  </div>
+               </label>
+               <button class="profile__button">сохранить изменения</button>
             </div>
          </div>
       </div>
    </section>
+
+   <!-- popup change pass start -->
+
+   <div class="popup popup-change">
+      <div class="popup__body">
+         <div class="change-pass">
+            <span class="icon icon-close popup__close"></span>
+            <div class="change-pass__input-block">
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Старый пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Новый пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+               <div class="change-pass__input-box">
+                  <p class="change-pass__input-title h8">Повторите пароль</p>
+                  <input type="password" class="change-pass__input input">
+               </div>
+            </div>
+            <button class="change-pass__btn">Сохранить</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- popup change pass end -->
 
    <!-- FOOTER start -->
    <footer class="footer">
