@@ -951,6 +951,12 @@
             text-align: center;
             width: 100%;
         }
+        &__value {
+            text-align: left;
+        }
+        &__edit-btn {
+            right: 0;
+        }
     }
     .profile__pass {
         flex-direction: row;
