@@ -551,6 +551,8 @@
     .page-basket {
         .btn-mobile {
             display: block;
+            text-align: center;
+            margin-bottom: 50px;
         }
     }
     .select {
@@ -957,6 +959,9 @@
         &__edit-btn {
             right: 0;
         }
+        &__back-btn {
+            right: 0;
+        }
     }
     .profile__pass {
         flex-direction: row;
@@ -1060,7 +1065,7 @@
         font-size: 15px;
     }
     .products-grid {
-        margin: 0px -14px calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320))) -14px;
+        margin: 0px -10px calc(70px + (95 - 70) * ((100vw - 320px) / (1920 - 320))) -10px;
     }
     .products-grid__dscr {
         justify-content: flex-start;
@@ -1132,7 +1137,7 @@
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
-                padding: 0 18px;
+                padding: 20px 18px 0px 18px;
                 background: #fff;
                 z-index: 2;
                 .burger-table__item {
@@ -1147,7 +1152,7 @@
             bottom: 50px;
             padding: 0px 15px;
             background: #fff;
-            margin-bottom: 23px;
+            padding-bottom: 23px;
         }
     }
     .header__nav-right {

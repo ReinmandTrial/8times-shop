@@ -413,22 +413,23 @@ $('.popup__close').on('click', function () {
 //popup end
 
 //Редактирование личной информации 
-$('.profile__edit-btn, .profile__button').on('click',function(){
+$('.profile__edit-btn, .profile__button, .profile__back-btn').on('click', function () {
     var btn = $(this);
     var block = btn.closest('.profile__container');
 
     var BlockVal = block.find('.profile__value');
-    $(BlockVal).each(function(){
+    $(BlockVal).each(function () {
         $(this).slideToggle();
     })
 
     var BlockInput = block.find('.profile__item');
-    $(BlockInput).each(function(){
+    $(BlockInput).each(function () {
         $(this).find('.profile__input').slideToggle();
     })
 
     block.find('.profile__accept').toggleClass('d-flex');
 
+    block.find('.profile__back-btn').slideToggle();
     block.find('.profile__button').slideToggle();
 
     block.find('.profile__edit-btn').slideToggle();

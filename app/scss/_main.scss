@@ -1945,6 +1945,13 @@ section {
         top: 0;
         right: 30px;
     }
+    &__back-btn {
+        text-decoration: underline;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        display: none;
+    }
     &__row {
         width: 100%;
         display: flex;
