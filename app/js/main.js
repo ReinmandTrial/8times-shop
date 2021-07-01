@@ -413,7 +413,7 @@ $('.popup__close').on('click', function () {
 //popup end
 
 //Редактирование личной информации 
-$('.profile__edit-btn, .profile__button, .profile__back-btn').on('click', function () {
+$('.profile__edit-btn, .profile__back-btn').on('click', function () {
     var btn = $(this);
     var block = btn.closest('.profile__container');
 

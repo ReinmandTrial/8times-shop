@@ -304,7 +304,8 @@ section {
     &-table__item-body {
         display: none;
         padding-left: 10px;
-        & p {
+        & a {
+            display: block;
             margin-bottom: 5px;
             cursor: pointer;
         }
@@ -2051,7 +2052,7 @@ section {
 
 .popup {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
