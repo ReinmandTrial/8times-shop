@@ -676,6 +676,10 @@
     }
 }
 @media (max-width: 767.98px) {
+    .header__icon-box:nth-child(4) {
+        display: none;
+    }
+
     .popup {
         .icon-close {
             display: none;
