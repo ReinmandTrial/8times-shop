@@ -133,6 +133,7 @@ section {
     color: $white;
     font-size: 12px;
     padding: 2px 0;
+    font-family: "Artegra Sans Extended Alt";
 }
 .header {
     .exit {
@@ -2137,3 +2138,99 @@ section {
 }
 
 /* popup change pass end  */
+
+
+/* Для текстовых странниц */
+
+// .page__discription{
+//     p{
+//        margin-bottom: 10px;
+//        line-height: 20px;
+//     }
+//     ul{
+//        li{
+//           line-height: 20px;
+//           margin-bottom: 10px;
+//        }
+//     }
+//     ol{
+//        li{
+//           line-height: 20px;
+//           margin-bottom: 10px;
+//        }
+//     }
+//  }
+
+.page__description p,
+.page__description ul li,
+.page__description ol li {
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+
+// Восстановление пароля: 
+
+
+.bx-authform {
+    text-align: center;
+  }
+  
+  .bx-authform-input-container input[type="text"], .bx-authform-input-container input[type="password"] {
+    font-family: "Artegra Sans Extended Alt";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    width: 100%;
+    padding: 13px 20px;
+    margin-bottom: 50px;
+    border: 1px solid #202020;
+    border-radius: 150px;
+    height: unset;
+  }
+  .bx-title {
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .bx-authform-content-container {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  
+  .bx-authform-label-container {
+    text-align: left;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+    color: #202020;
+  }
+  .bx-authform-link-container a {
+    text-decoration: underline;
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 300;
+    line-height: 23px;
+    text-transform: uppercase;
+  }
+  bx-authform-formgroup-container .btn.btn-primary {
+    text-align: center;
+    color: #fff;
+    border: 1px solid #202020;
+    border-radius: 150px;
+    background: #202020;
+    padding: 12px 0px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .bx-authform-formgroup-container .btn.btn-primary {
+    text-align: center;
+    color: #fff;
+    border: 1px solid #202020;
+    border-radius: 150px;
+    background: #202020;
+    padding: 12px 0px;
+    width: 100%;
+  }
+  .bx-authform-link-container a:hover {
+    text-decoration: none;
+  }
+  
