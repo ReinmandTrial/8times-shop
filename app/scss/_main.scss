@@ -251,11 +251,13 @@ section {
     line-height: 40px;
     top: calc(55px + (209 - 55) * ((100vw - 320px) / (1920 - 320)));
     height: calc(100vh - (56px + (210 - 56) * ((100vw - 320px) / (1920 - 320))));
+    // height: 100vh;
+    // top: 0;
     left: 0;
     bottom: 0;
     z-index: 999;
     background: $background3;
-    opacity: 0.98;
+    opacity: 0.5;
     .icon {
         margin-right: 15px;
     }

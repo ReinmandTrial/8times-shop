@@ -67,7 +67,8 @@ $('.btn-burger').on('click', function () {
     $(this).toggleClass('icon-burger');
     $(this).toggleClass('icon-close');
     $('.header').toggleClass('open');
-    $('body').toggleClass('burger-open');
+    // $('body').toggleClass('burger-open');
+    $('body,html').css('overflow-y', 'hidden');
     if ($(this).hasClass('icon-close')) {
         $('.burger').show();
 
@@ -107,7 +108,9 @@ $('.btn-login').on('click', function () {
     $('.page-login').removeClass('d-none');
     $('.btn-burger').removeClass('icon-close').addClass('icon-burger');
     $('.header').removeClass('open').removeClass('header--basket');
-    $('body').removeClass('burger-open');
+    // $('body').removeClass('burger-open');
+    
+    $('body,html').css('overflow-y', 'auto');
     if ($('.page-basket__container').hasClass('open')) {
         $('.page-basket__container').removeClass('open');
         $('.page-basket__container').fadeOut();
