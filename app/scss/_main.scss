@@ -140,7 +140,7 @@ section {
         display: none;
     }
     &.open {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         z-index: 9999;
@@ -252,6 +252,7 @@ section {
     top: calc(55px + (209 - 55) * ((100vw - 320px) / (1920 - 320)));
     height: calc(100vh - (56px + (210 - 56) * ((100vw - 320px) / (1920 - 320))));
     left: 0;
+    bottom: 0;
     z-index: 999;
     background: $background3;
     opacity: 0.98;
