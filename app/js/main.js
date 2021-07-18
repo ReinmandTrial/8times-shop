@@ -71,9 +71,11 @@ $('.btn-burger').on('click', function () {
     $('body,html').css('overflow-y', 'hidden');
     if ($(this).hasClass('icon-close')) {
         $('.burger').show();
+        $('body,html').css('overflow-y', 'hidden');
 
     } else {
         $('.burger').hide();
+        $('body,html').css('overflow-y', 'auto');
     }
 })
 //burger menu end\
