@@ -875,7 +875,7 @@
         }
     }
     .burger {
-        overflow-y: auto;
+        overflow-y: scroll;
         &-table {
             flex-wrap: wrap;
         }
