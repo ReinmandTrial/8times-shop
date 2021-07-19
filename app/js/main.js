@@ -3,7 +3,7 @@
 // const { default: Swiper } = require("swiper");
 
 document.querySelectorAll('.swiper-container').forEach(function (elem) {
-    if($('body').find('div').hasClass('page-favorites__content')){
+    if($('body').find('section').hasClass('page-favorites')){
         new Swiper(elem, {
             navigation: {
                 nextEl: elem.nextElementSibling.nextElementSibling,
@@ -57,6 +57,33 @@ document.querySelectorAll('.swiper-container').forEach(function (elem) {
         });
     }
 });
+$(function(){
+    if($('body').find('section').hasClass('page-favorites')){
+        var slides = $('.swiper-wrapper').find('.swiper-slide');
+        var count = 0;
+        $(slides).each(function(){
+            count++;
+        })
+        if($(window).width() >= "1200"){
+            if(count <= 5){
+                $('.products-slider__button').hide();
+            }
+        }else if($(window).width() >= "768" && $(window).width() < "1200"){
+            if(count <= 4){
+                $('.products-slider__button').hide();
+            }
+        }else if($(window).width() >= "480" && $(window).width() < "768"){
+            if(count <= 3){
+                $('.products-slider__button').hide();
+            }
+        }else if($(window).width() >= "320" && $(window).width() < "480"){
+            if(count <= 2){
+                $('.products-slider__button').hide();
+            }
+        }
+
+    }
+})
 new Swiper('.swiper-banner', {
     watchOverflow: true, //если слайдов мало, - слайдер отключается
     loop: true, // бесконечный слайдер

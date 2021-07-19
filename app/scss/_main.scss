@@ -1783,6 +1783,12 @@ section {
 .products-slider__button_prev {
     display: none;
 }
+.page-favorites{
+    .products-slider__button_prev {
+        display: block;
+    }
+
+}
 
 .description {
     margin: 70px 0 110px;
