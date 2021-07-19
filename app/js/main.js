@@ -3,31 +3,59 @@
 // const { default: Swiper } = require("swiper");
 
 document.querySelectorAll('.swiper-container').forEach(function (elem) {
-    new Swiper(elem, {
-        navigation: {
-            nextEl: elem.nextElementSibling.nextElementSibling,
-            prevEl: elem.nextElementSibling,
-        },
-        grabCursor: true, //  курсор-рука
-        autoHeight: true, // автовысота
-        slidesPerView: 'auto', //кол-во показываемых слайдов
-        watchOverflow: true, //если слайдов мало, - слайдер отключается
-        spaceBetween: 20, // отступы между слайдами
-        loop: true, // бесконечный слайдер
-        slideToClickedSlide: false,
-        breakpoints: {
-            0: {
-                spaceBetween: 4,
+    if($('body').find('div').hasClass('page-favorites__content')){
+        new Swiper(elem, {
+            navigation: {
+                nextEl: elem.nextElementSibling.nextElementSibling,
+                prevEl: elem.nextElementSibling,
             },
-            991: {
-                spaceBetween: 20,
-                slidesPerView: '4',
+            grabCursor: true, //  курсор-рука
+            autoHeight: true, // автовысота
+            slidesPerView: 'auto', //кол-во показываемых слайдов
+            watchOverflow: true, //если слайдов мало, - слайдер отключается
+            spaceBetween: 20, // отступы между слайдами
+            // loop: true, // бесконечный слайдер
+            slideToClickedSlide: false,
+            breakpoints: {
+                0: {
+                    spaceBetween: 4,
+                },
+                991: {
+                    spaceBetween: 20,
+                    slidesPerView: '4',
+                },
+                1200: {
+                    slidesPerView: '5',
+                },
             },
-            1200: {
-                slidesPerView: '5',
+        });
+    }else{
+        new Swiper(elem, {
+            navigation: {
+                nextEl: elem.nextElementSibling.nextElementSibling,
+                prevEl: elem.nextElementSibling,
             },
-        },
-    });
+            grabCursor: true, //  курсор-рука
+            autoHeight: true, // автовысота
+            slidesPerView: 'auto', //кол-во показываемых слайдов
+            watchOverflow: true, //если слайдов мало, - слайдер отключается
+            spaceBetween: 20, // отступы между слайдами
+            loop: true, // бесконечный слайдер
+            slideToClickedSlide: false,
+            breakpoints: {
+                0: {
+                    spaceBetween: 4,
+                },
+                991: {
+                    spaceBetween: 20,
+                    slidesPerView: '4',
+                },
+                1200: {
+                    slidesPerView: '5',
+                },
+            },
+        });
+    }
 });
 new Swiper('.swiper-banner', {
     watchOverflow: true, //если слайдов мало, - слайдер отключается
